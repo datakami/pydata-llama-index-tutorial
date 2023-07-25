@@ -8,5 +8,5 @@ $ cd ./pydata-llama-index-tutorial
 $ python -m venv ./venv
 $ source ./venv/bin/activate
 $ pip install -r requirements.txt
-$ ipython notebook
+$ jupyter-notebook
 ```
