@@ -7,6 +7,6 @@ $ git clone https://github.com/datakami/pydata-llama-index-tutorial.git
 $ cd ./pydata-llama-index-tutorial
 $ python -m venv ./venv
 $ source ./venv/bin/activate
-$ pip install -r requirements.txt
+$ pip install --no-deps -r requirements.txt
 $ jupyter-notebook
 ```
