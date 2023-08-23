@@ -65,6 +65,7 @@ mistune==3.0.1
 mpmath==1.2.1
 multidict==6.0.4
 mypy-extensions==1.0.0
+nb-clean==2.4.0
 nbclient==0.8.0
 nbconvert==7.7.4
 nbformat==5.9.2
