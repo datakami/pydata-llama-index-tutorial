@@ -1,3 +1,8 @@
 venv/
+secret.py
+*.log
 tutorial.log
 .ipynb_checkpoints/
+local/
+__pycache__
+models/
