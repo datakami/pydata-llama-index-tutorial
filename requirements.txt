@@ -30,6 +30,7 @@ fsspec==2023.6.0
 greenlet==2.0.2
 huggingface-hub==0.16.4
 idna==3.4
+importlib-metadata==6.8.0
 ipykernel==6.25.1
 ipython==8.14.0
 ipython-genutils==0.2.0
@@ -143,3 +144,4 @@ webencodings==0.5.1
 websocket-client==1.6.2
 widgetsnbextension==4.0.8
 yarl==1.9.2
+zipp==3.16.2
