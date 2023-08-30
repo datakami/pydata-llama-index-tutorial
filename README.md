@@ -18,3 +18,8 @@ $ jupyter-notebook
 $ nb-clean clean -o [yournotebook.ipynb]
 ```
 
+## Building Exercises from Solutions
+Solution filenames should start with "Solutions-". Code cells that start with a "#" are converted to questions with empty answers.
+```
+$ python -m build.split
+```
