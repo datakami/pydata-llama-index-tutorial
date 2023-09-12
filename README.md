@@ -5,7 +5,7 @@
 
 You can open the exercises in Google's Colab with the button below:
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg>)](https://colab.research.google.com/github/datakami/pydata-llama-index-tutorial/blob/main/Colab-Exercises.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datakami/pydata-llama-index-tutorial/blob/main/Colab-Exercises.ipynb)
 
 ### Quick Start (using docker)
 
