@@ -1,5 +1,5 @@
-#!/usr/bin/env python2.7
-#source: https://github.com/brandon-rhodes/pycon-pandas-tutorial
+#!/usr/bin/python
+# adapted from: https://github.com/brandon-rhodes/pycon-pandas-tutorial
 
 import glob
 import json
@@ -37,19 +37,24 @@ def convert(filename):
 
 def filter_cells(filename, cells):
     n = 0
-    starting = True
+    active_question = False
     for cell in cells:
+        # clear error messages, outputs, etc. 
+        if cell.get('outputs'):
+            cell['outputs'] = []
+        
         if cell['cell_type'] != 'code':
+            active_question = False
             yield cell
             continue
         
         source = u''.join(cell['source'])
 
-        if starting:
+        if not active_question:
             if not source.startswith('# '):
                 yield cell
             else:
-                starting = False
+                active_question = True
 
         if not source.startswith('# '):
             continue
