@@ -6,3 +6,4 @@ tutorial.log
 local/
 __pycache__
 models/
+/indices/julia_evans_blogposts/
