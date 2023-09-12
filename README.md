@@ -1,6 +1,7 @@
 # PyData Amsterdam 2023 workshop materials
 
-# Quick Start (using docker)
+## For workshop participants
+### Quick Start (using docker)
 This assumes you have Docker and git installed. The image takes about 1.7GB of disk space.
 
 ```
@@ -10,7 +11,7 @@ $ docker run -it --rm -v $PWD:/repo -p 127.0.0.1:8888:8888 ghcr.io/datakami/llam
 ```
 In the output, find the line saying "Jupyter Server 2.7.3 is running at:", and click the link starting with `http://127.0.0.1:8888`. Jupyterlab should launch in your browser.
 
-# Quick Start (no docker)
+### Quick Start (no docker)
 
 This assumes you have git and Python 3.8 - 3.11 installed.
 ```
@@ -23,13 +24,14 @@ $ python check_installation.py
 $ jupyter-notebook
 ```
 
-## When committing
+## For contributors
+### When committing
 
 ```
 $ nb-clean clean -o [yournotebook.ipynb]
 ```
 
-## Building Exercises from Solutions
+### Building Exercises from Solutions
 Solution filenames should start with "Solutions-". Code cells that start with a "#" are converted to questions with empty answers.
 ```
 $ python -m build.split
