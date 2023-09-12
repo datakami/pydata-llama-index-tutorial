@@ -33,7 +33,7 @@ def convert(filename):
     j['cells'] = list(filter_cells(filename, j['cells']))
     assert 'Solutions' in filename
     with open(filename.replace('Solutions', 'Exercises'), 'w') as f:
-        f.write(json.dumps(j, indent=2))
+        f.write(json.dumps(j, indent=1))
 
 def filter_cells(filename, cells):
     n = 0
@@ -76,9 +76,9 @@ def filter_cells(filename, cells):
         n += 1
     print('{:6}   {}'.format(n, filename))
 
-def main2():
+def main():
     for filename in sorted(glob.glob('Solutions-*.ipynb')):
         convert(filename)
 
 if __name__ == '__main__':
-    main2()
+    main()

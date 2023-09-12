@@ -1,6 +1,9 @@
 # PyData Amsterdam 2023 workshop materials
 
 ## For workshop participants
+
+You have three options for running the software for this workshop. They are listed from easiest to hardest:
+
 ### Quick Start (using colab)
 
 You can open the exercises in Google's Colab with the button below:
@@ -16,7 +19,7 @@ $ git clone https://github.com/datakami/pydata-llama-index-tutorial.git
 $ cd ./pydata-llama-index-tutorial
 $ docker run -it --rm -v $PWD:/repo -p 127.0.0.1:8888:8888 ghcr.io/datakami/llamaindex-workshop:latest
 ```
-In the output, find the line saying "Jupyter Server 2.7.3 is running at:", and click the link starting with `http://127.0.0.1:8888`. Jupyterlab should launch in your browser.
+In the output, find the line saying "Jupyter Server 2.7.3 is running at:", and click the link starting with `http://127.0.0.1:8888`. Jupyterlab should launch in your browser. Open the `Exercises-1.ipynb` file to get started.
 
 ### Quick Start (no docker)
 
@@ -31,6 +34,8 @@ $ python check_installation.py
 $ jupyter-notebook
 ```
 
+Jupyterlab should launch in your browser. Open the `Exercises-1.ipynb` file to get started.
+
 ## For contributors
 ### When committing
 
@@ -41,5 +46,5 @@ $ nb-clean clean -o [yournotebook.ipynb]
 ### Building Exercises from Solutions
 Solution filenames should start with "Solutions-". Code cells that start with a "#" are converted to questions with empty answers.
 ```
-$ python -m build.split
+$ python -m build
 ```
