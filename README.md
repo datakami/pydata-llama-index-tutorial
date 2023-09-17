@@ -36,6 +36,18 @@ $ jupyter-notebook
 
 Jupyterlab should launch in your browser. Open the `Exercises-1.ipynb` file to get started.
 
+## Explanation: Repository structure
+
+There are a few different files:
+
+- `Exercises-*.ipynb`: These files contain exercises for workshop participants. Participants are meant to use these.
+- `Colab-*.ipynb`: merged notebooks that can be used to run this workshop in colab.
+- `Solutions-*.ipynb`: also contain answers. Used to generate the exercises notebooks.
+- `check_installation.py`: can be used to check that all dependencies are set up correctly and download the necessary models.
+- `data/`, `indices/`: workshop data and vector indices, used in the exercises.
+- `Build-*.ipynb`: notebooks to prepare the workshop data and vector indices.
+- `build/`: code to generate the exercises and colab notebooks.
+
 ## For contributors
 ### When committing
 
