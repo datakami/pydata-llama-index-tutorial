@@ -6,34 +6,33 @@ import json
 import os
 import re
 
-def blank_code_cell():
+def blank_code_cell(id):
     return {
         "cell_type": "code",
         "execution_count": None,
-        "metadata": {
-            "collapsed": True
-        },
+        "id": id,
+        "metadata": {},
         "outputs": [],
         "source": [],
     }
 
-def question_cell(text):
+def question_cell(text, id):
     return {
         "cell_type": "markdown",
-        "metadata": {
-            "collapsed": True
-        },
-        "source": '### ' + text.strip(),
+        "id": id,
+        "metadata": {},
+        "source": ['### ' + text.strip()],
     }
 
 
 def convert(filename):
-    f = open(filename)
-    j = json.load(f)
+    with open(filename) as f:
+        j = json.load(f)
     j['cells'] = list(filter_cells(filename, j['cells']))
     assert 'Solutions' in filename
     with open(filename.replace('Solutions', 'Exercises'), 'w') as f:
-        f.write(json.dumps(j, indent=1))
+        json.dump(j, f, indent=1)
+        f.write("\n")
 
 def filter_cells(filename, cells):
     n = 0
@@ -68,10 +67,11 @@ def filter_cells(filename, cells):
 
         question = ' '.join(question)
 
-        yield question_cell(question)
+        # deterministic cell ids across multiple runs
+        yield question_cell(question, id=cell["id"] + "-q")
 
-        yield blank_code_cell()
-        yield blank_code_cell()
+        yield blank_code_cell(id=cell["id"] + "-a1")
+        yield blank_code_cell(id=cell["id"] + "-a2")
 
         n += 1
     print('{:6}   {}'.format(n, filename))
